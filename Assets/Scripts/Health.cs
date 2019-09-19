@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
@@ -20,12 +21,18 @@ public class Health : MonoBehaviour
     [Space]
     [SerializeField] SpriteRenderer spriteRenderer;
 
+    [SerializeField] Slider healthSlider;
 
     private void Awake()
     {
         currentHealth = maxHealth;
 
         timeSinceLastDodgeInvincibility = dodgeInvincibilityDelay;
+
+        if(healthSlider != null)
+        {
+            healthSlider.maxValue = maxHealth;
+        }
     }
 
 
@@ -41,6 +48,11 @@ public class Health : MonoBehaviour
                 canTakeDamage = true;
                 ResetPlayerInvincibilityDesignDueToDodgeBackToNormal();
             }
+        }
+
+        if (healthSlider != null)
+        {
+            healthSlider.value = currentHealth;
         }
     }
 

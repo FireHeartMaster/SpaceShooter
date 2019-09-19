@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class BulletGun : MonoBehaviour
 {
@@ -26,6 +26,11 @@ public class BulletGun : MonoBehaviour
 
     [Space]
     [SerializeField] Energy energy;
+
+    [Space]
+    [Header("BulletSelectionUIImage")]
+    public float alphaValueWhenNotActive = 0.5f;
+    public Image[] bulletImageSelection;
 
     private void Awake()
     {

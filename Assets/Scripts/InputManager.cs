@@ -29,6 +29,26 @@ public class InputManager : MonoBehaviour
         timeSinceLastDodge = timeBetweenDodges;
     }
 
+    private void Start()
+    {
+        int numberOfBulletTypes = System.Enum.GetValues(typeof(BulletGun.FireShotType)).Length;
+
+        if (numberOfBulletTypes == playerBulletGun.bulletImageSelection.Length)
+        {
+            for (int i = 0; i < numberOfBulletTypes; i++)
+            {
+                if (i == (int)playerBulletGun.m_FireShotType)
+                {
+                    playerBulletGun.bulletImageSelection[i].color = new Color(playerBulletGun.bulletImageSelection[i].color.r, playerBulletGun.bulletImageSelection[i].color.g, playerBulletGun.bulletImageSelection[i].color.b, 1f);
+                }
+                else
+                {
+                    playerBulletGun.bulletImageSelection[i].color = new Color(playerBulletGun.bulletImageSelection[i].color.r, playerBulletGun.bulletImageSelection[i].color.g, playerBulletGun.bulletImageSelection[i].color.b, playerBulletGun.alphaValueWhenNotActive);
+                }
+
+            }
+        }
+    }
     void Update()
     {
         float w = CrossPlatformInputManager.GetAxis("Vertical");
@@ -60,8 +80,24 @@ public class InputManager : MonoBehaviour
             timeSinceChangeOfShotType = 0f;
             //Change Type of fire shot
             //Debug.Log("Change fire type");
-            playerBulletGun.m_FireShotType = ((int)(playerBulletGun.m_FireShotType) == (System.Enum.GetValues(typeof(BulletGun.FireShotType)).Length) - 1) ? (BulletGun.FireShotType) 0 :
+            int numberOfBulletTypes = System.Enum.GetValues(typeof(BulletGun.FireShotType)).Length;
+            playerBulletGun.m_FireShotType = ((int)(playerBulletGun.m_FireShotType) == numberOfBulletTypes - 1) ? (BulletGun.FireShotType) 0 :
                                                 (BulletGun.FireShotType)(playerBulletGun.m_FireShotType + 1);
+            if(numberOfBulletTypes == playerBulletGun.bulletImageSelection.Length)
+            {
+                for(int i=0; i< numberOfBulletTypes; i++)
+                {
+                    if(i == (int)playerBulletGun.m_FireShotType)
+                    {
+                        playerBulletGun.bulletImageSelection[i].color = new Color(playerBulletGun.bulletImageSelection[i].color.r, playerBulletGun.bulletImageSelection[i].color.g, playerBulletGun.bulletImageSelection[i].color.b, 1f);
+                    }
+                    else
+                    {
+                        playerBulletGun.bulletImageSelection[i].color = new Color(playerBulletGun.bulletImageSelection[i].color.r, playerBulletGun.bulletImageSelection[i].color.g, playerBulletGun.bulletImageSelection[i].color.b, playerBulletGun.alphaValueWhenNotActive);
+                    }
+
+                }
+            }
         }
 
 
@@ -70,7 +106,7 @@ public class InputManager : MonoBehaviour
 
         timeSinceLastDodge += Time.deltaTime;
 
-        if (dodgeInput && timeSinceLastDodge >= timeBetweenDodges)
+        if (dodgeInput && timeSinceLastDodge >= timeBetweenDodges && !energy.slowRecover)
         {
             timeSinceLastDodge = 0f;
             //dodge now

@@ -21,14 +21,19 @@ public class Energy : MonoBehaviour
 
     [SerializeField] Slider energySlider;
 
-    [SerializeField] Color sliderFillNormalColor;
-    [SerializeField] Color sliderFillSlowRecoveryColor;
+    [SerializeField] Color energySliderFillNormalColor;
+    [SerializeField] Color energySliderFillSlowRecoveryColor;
 
     [SerializeField] Image sliderFillImage;
 
     private void Awake()
     {
         currentEnergy = maxEnergy;
+
+        if(energySlider != null)
+        {
+            energySlider.maxValue = maxEnergy;
+        }
     }
 
     private void Update()
@@ -40,7 +45,8 @@ public class Energy : MonoBehaviour
             slowRecover = false;
             canShoot = true;
 
-            sliderFillImage.color = sliderFillNormalColor;
+            if (energySlider != null)
+                sliderFillImage.color = energySliderFillNormalColor;
         }
 
         if (canRecoverEnergy && currentEnergy < maxEnergy)
@@ -48,7 +54,8 @@ public class Energy : MonoBehaviour
             currentEnergy += (!slowRecover ? energyRecoveryRate : slowEnergyRecoveryRate) * Time.deltaTime;
         }
 
-        energySlider.value = currentEnergy;
+        if (energySlider != null)
+            energySlider.value = currentEnergy;
     }
 
     public void SpendEnergy(float energyAmount)
@@ -64,7 +71,8 @@ public class Energy : MonoBehaviour
             slowRecover = true;
             canShoot = false;
 
-            sliderFillImage.color = sliderFillSlowRecoveryColor;
+            if (energySlider != null)
+                sliderFillImage.color = energySliderFillSlowRecoveryColor;
         }
     }
 
