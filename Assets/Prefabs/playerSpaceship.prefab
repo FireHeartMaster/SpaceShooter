@@ -138,7 +138,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0ad34506320c70e4a90a55ce2e478f53, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -252,10 +252,13 @@ MonoBehaviour:
   currentHealth: 0
   canTakeDamage: 0
   isAlive: 1
-  dodgeInvincibilityDelay: 0.5
+  dodgeInvincibilityDelay: 0.7
   alphaValueInvincibilityDesign: 0.5
   spriteRenderer: {fileID: 3458844590165583105}
   healthSlider: {fileID: 0}
+  timeToDisapearAfterDying: 3
+  explosionPrefab: {fileID: 1745349613052912752, guid: 7e4e5182ea4b3a34a8f92e5079e8841d,
+    type: 3}
 --- !u!114 &3458844590165583114
 MonoBehaviour:
   m_ObjectHideFlags: 0

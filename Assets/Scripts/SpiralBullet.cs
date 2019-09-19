@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpiralBullet : Bullet
 {
+    Vector3 previousPosition;
+
     Vector3 initialPosition;
 
     float currentRadius = 0;
@@ -30,6 +32,10 @@ public class SpiralBullet : Bullet
         currentAngle += angleIncreasingSpeed * Time.fixedDeltaTime;
 
         transform.position += new Vector3(currentRadius * Mathf.Cos(currentAngle), currentRadius * Mathf.Sin(currentAngle), transform.position.z);
+
+        transform.rotation = Quaternion.LookRotation(Vector3.forward, Vector3.Cross(Vector3.forward, transform.position - previousPosition));
+
+        previousPosition = transform.position;
     }
     private void FixedUpdate()
     {

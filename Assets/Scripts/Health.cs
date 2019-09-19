@@ -23,6 +23,16 @@ public class Health : MonoBehaviour
 
     [SerializeField] Slider healthSlider;
 
+    [Space]
+    [Header("Death")]
+    [SerializeField] float timeToDisapearAfterDying = 3f;
+    [SerializeField] GameObject explosionPrefab;
+
+    [Space]
+    [Header("DamageDelay")]
+    [SerializeField] float timeBetweenDamages = 2f;
+    float timeSinceLastDamage;
+
     private void Awake()
     {
         currentHealth = maxHealth;
@@ -33,6 +43,8 @@ public class Health : MonoBehaviour
         {
             healthSlider.maxValue = maxHealth;
         }
+
+        timeSinceLastDamage = timeBetweenDamages;
     }
 
 
@@ -54,11 +66,22 @@ public class Health : MonoBehaviour
         {
             healthSlider.value = currentHealth;
         }
+
+        timeSinceLastDamage += Time.deltaTime;
     }
 
     public void TakeDamage(float damageAmount)
     {
         if (!canTakeDamage) return;
+
+        //if (timeSinceLastDamage < timeBetweenDamages)
+        //{
+        //    return;
+        //}
+        //else
+        //{
+        //    timeSinceLastDamage = 0f;
+        //}
 
         currentHealth -= damageAmount;
 
@@ -73,6 +96,9 @@ public class Health : MonoBehaviour
         Debug.Log(gameObject.name + " is dead");
         canTakeDamage = false;
         isAlive = false;
+        spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0f);
+        GameObject explosionGameObject = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        Destroy(gameObject, timeToDisapearAfterDying);
     }
 
     public void PlayerDodgeInvincibility()
@@ -93,3 +119,4 @@ public class Health : MonoBehaviour
         spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 1f);
     }
 }
+;
