@@ -15,11 +15,18 @@ public class InputManager : MonoBehaviour
     [SerializeField] float timeBetweenChangingShotType = 0.2f;
     float timeSinceChangeOfShotType;
 
+    [SerializeField] Energy energy;
+
+    [SerializeField] float timeBetweenDodges = 1f;
+    float timeSinceLastDodge;
+
     private void Awake()
     {
         timeSinceLastShot = timeBetweenShots;
 
         timeSinceChangeOfShotType = timeBetweenChangingShotType;
+
+        timeSinceLastDodge = timeBetweenDodges;
     }
 
     void Update()
@@ -36,9 +43,12 @@ public class InputManager : MonoBehaviour
         timeSinceLastShot += Time.deltaTime;
         if (fire >= 0.5f && timeSinceLastShot >= timeBetweenShots)
         {
-            timeSinceLastShot = 0f;
-            playerBulletGun.Shoot();
-            //Debug.Log("Fire!!!");
+            if (energy.canShoot)
+            {
+                timeSinceLastShot = 0f;
+                playerBulletGun.Shoot();
+                //Debug.Log("Fire!!!");
+            }
         }
 
 
@@ -52,6 +62,19 @@ public class InputManager : MonoBehaviour
             //Debug.Log("Change fire type");
             playerBulletGun.m_FireShotType = ((int)(playerBulletGun.m_FireShotType) == (System.Enum.GetValues(typeof(BulletGun.FireShotType)).Length) - 1) ? (BulletGun.FireShotType) 0 :
                                                 (BulletGun.FireShotType)(playerBulletGun.m_FireShotType + 1);
+        }
+
+
+
+        bool dodgeInput = CrossPlatformInputManager.GetButtonDown("Fire1"); //condition to verify input to dodge attacks
+
+        timeSinceLastDodge += Time.deltaTime;
+
+        if (dodgeInput && timeSinceLastDodge >= timeBetweenDodges)
+        {
+            timeSinceLastDodge = 0f;
+            //dodge now
+            playerMoveShip.Dodge();
         }
     }
 }

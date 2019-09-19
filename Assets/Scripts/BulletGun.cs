@@ -17,7 +17,15 @@ public class BulletGun : MonoBehaviour
 
     public enum FireShotType { Simple, Diagonal, Spiral };
 
-    public FireShotType m_FireShotType = FireShotType.Simple;    
+    public FireShotType m_FireShotType = FireShotType.Simple;
+
+    [Space]
+    [SerializeField] float simpleShotEnergyAmount = 10f;
+    [SerializeField] float diagonalShotEnergyAmount = 20f;
+    [SerializeField] float spiralShotEnergyAmount = 30f;
+
+    [Space]
+    [SerializeField] Energy energy;
 
     private void Awake()
     {
@@ -36,14 +44,17 @@ public class BulletGun : MonoBehaviour
         {
             case FireShotType.Simple:
                 SimpleShoot(simpleBulletPrefab, Vector3.right);
+                energy.SpendEnergy(simpleShotEnergyAmount);
                 break;
 
             case FireShotType.Diagonal:
                 ShootDiagonal(simpleBulletPrefab);
+                energy.SpendEnergy(diagonalShotEnergyAmount);
                 break;
 
             case FireShotType.Spiral:
                 SimpleShoot(spiralBulletPrefab, Vector3.right);
+                energy.SpendEnergy(spiralShotEnergyAmount);
                 break;
 
 

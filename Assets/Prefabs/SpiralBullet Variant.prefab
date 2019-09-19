@@ -17,8 +17,8 @@ MonoBehaviour:
   bulletSpeed: 18.4
   playerBullet: 1
   canProvokeDamage: 1
-  radiusIncreasingSpeed: -0.09
-  angleIncreasingSpeed: 6.8
+  radiusIncreasingSpeed: 2
+  angleIncreasingSpeed: 8
 --- !u!1001 &3226099814652020819
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -84,6 +84,11 @@ PrefabInstance:
     - target: {fileID: 8645821835262106721, guid: 5f4b1e079bdc71146b43a6edb2b60708,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645821835262106723, guid: 5f4b1e079bdc71146b43a6edb2b60708,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
