@@ -5,19 +5,19 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class InputManager : MonoBehaviour
 {
-    [SerializeField] MoveShip playerMoveShip;
-    [SerializeField] BulletGun playerBulletGun;
+    [SerializeField] protected MoveShip playerMoveShip;
+    [SerializeField] protected BulletGun shipBulletGun;
     //[SerializeField] GameObject simpleBulletPrefab;
 
-    [SerializeField] float timeBetweenShots = 0.2f;
+    [SerializeField] protected float timeBetweenShots = 0.2f;
     float timeSinceLastShot;
 
-    [SerializeField] float timeBetweenChangingShotType = 0.2f;
+    [SerializeField] protected float timeBetweenChangingShotType = 0.2f;
     float timeSinceChangeOfShotType;
 
-    [SerializeField] Energy energy;
+    [SerializeField] protected Energy energy;
 
-    [SerializeField] float timeBetweenDodges = 1f;
+    [SerializeField] protected float timeBetweenDodges = 1f;
     float timeSinceLastDodge;
 
     private void Awake()
@@ -29,27 +29,27 @@ public class InputManager : MonoBehaviour
         timeSinceLastDodge = timeBetweenDodges;
     }
 
-    private void Start()
+    protected void Start()
     {
-        int numberOfBulletTypes = System.Enum.GetValues(typeof(BulletGun.FireShotType)).Length;
+        int numberOfBulletTypes = System.Enum.GetValues(typeof(/*BulletGun.*/FireShotType)).Length;
 
-        if (numberOfBulletTypes == playerBulletGun.bulletImageSelection.Length)
+        if (numberOfBulletTypes == shipBulletGun.bulletImageSelection.Length)
         {
             for (int i = 0; i < numberOfBulletTypes; i++)
             {
-                if (i == (int)playerBulletGun.m_FireShotType)
+                if (i == (int)shipBulletGun.m_FireShotType)
                 {
-                    playerBulletGun.bulletImageSelection[i].color = new Color(playerBulletGun.bulletImageSelection[i].color.r, playerBulletGun.bulletImageSelection[i].color.g, playerBulletGun.bulletImageSelection[i].color.b, 1f);
+                    shipBulletGun.bulletImageSelection[i].color = new Color(shipBulletGun.bulletImageSelection[i].color.r, shipBulletGun.bulletImageSelection[i].color.g, shipBulletGun.bulletImageSelection[i].color.b, 1f);
                 }
                 else
                 {
-                    playerBulletGun.bulletImageSelection[i].color = new Color(playerBulletGun.bulletImageSelection[i].color.r, playerBulletGun.bulletImageSelection[i].color.g, playerBulletGun.bulletImageSelection[i].color.b, playerBulletGun.alphaValueWhenNotActive);
+                    shipBulletGun.bulletImageSelection[i].color = new Color(shipBulletGun.bulletImageSelection[i].color.r, shipBulletGun.bulletImageSelection[i].color.g, shipBulletGun.bulletImageSelection[i].color.b, shipBulletGun.alphaValueWhenNotActive);
                 }
 
             }
         }
     }
-    void Update()
+    protected void Update()
     {
         float w = CrossPlatformInputManager.GetAxis("Vertical");
         float h = CrossPlatformInputManager.GetAxis("Horizontal");
@@ -66,7 +66,7 @@ public class InputManager : MonoBehaviour
             if (energy.canShoot)
             {
                 timeSinceLastShot = 0f;
-                playerBulletGun.Shoot();
+                shipBulletGun.Shoot();
                 //Debug.Log("Fire!!!");
             }
         }
@@ -80,20 +80,20 @@ public class InputManager : MonoBehaviour
             timeSinceChangeOfShotType = 0f;
             //Change Type of fire shot
             //Debug.Log("Change fire type");
-            int numberOfBulletTypes = System.Enum.GetValues(typeof(BulletGun.FireShotType)).Length;
-            playerBulletGun.m_FireShotType = ((int)(playerBulletGun.m_FireShotType) == numberOfBulletTypes - 1) ? (BulletGun.FireShotType) 0 :
-                                                (BulletGun.FireShotType)(playerBulletGun.m_FireShotType + 1);
-            if(numberOfBulletTypes == playerBulletGun.bulletImageSelection.Length)
+            int numberOfBulletTypes = System.Enum.GetValues(typeof(/*BulletGun.*/FireShotType)).Length;
+            shipBulletGun.m_FireShotType = ((int)(shipBulletGun.m_FireShotType) == numberOfBulletTypes - 1) ? (/*BulletGun.*/FireShotType) 0 :
+                                                (/*BulletGun.*/FireShotType)(shipBulletGun.m_FireShotType + 1);
+            if(numberOfBulletTypes == shipBulletGun.bulletImageSelection.Length)
             {
                 for(int i=0; i< numberOfBulletTypes; i++)
                 {
-                    if(i == (int)playerBulletGun.m_FireShotType)
+                    if(i == (int)shipBulletGun.m_FireShotType)
                     {
-                        playerBulletGun.bulletImageSelection[i].color = new Color(playerBulletGun.bulletImageSelection[i].color.r, playerBulletGun.bulletImageSelection[i].color.g, playerBulletGun.bulletImageSelection[i].color.b, 1f);
+                        shipBulletGun.bulletImageSelection[i].color = new Color(shipBulletGun.bulletImageSelection[i].color.r, shipBulletGun.bulletImageSelection[i].color.g, shipBulletGun.bulletImageSelection[i].color.b, 1f);
                     }
                     else
                     {
-                        playerBulletGun.bulletImageSelection[i].color = new Color(playerBulletGun.bulletImageSelection[i].color.r, playerBulletGun.bulletImageSelection[i].color.g, playerBulletGun.bulletImageSelection[i].color.b, playerBulletGun.alphaValueWhenNotActive);
+                        shipBulletGun.bulletImageSelection[i].color = new Color(shipBulletGun.bulletImageSelection[i].color.r, shipBulletGun.bulletImageSelection[i].color.g, shipBulletGun.bulletImageSelection[i].color.b, shipBulletGun.alphaValueWhenNotActive);
                     }
 
                 }

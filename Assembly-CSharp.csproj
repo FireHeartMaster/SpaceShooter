@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\BulletGun.cs" />
     <Compile Include="Assets\Scripts\BulletSimpleMove.cs" />
     <Compile Include="Assets\Scripts\ControlBackground.cs" />
+    <Compile Include="Assets\Scripts\EnemySimpleInputManager.cs" />
     <Compile Include="Assets\Scripts\Energy.cs" />
     <Compile Include="Assets\Scripts\Eraser.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Assets\Scripts\MoveBackground.cs" />
     <Compile Include="Assets\Scripts\MoveCamera.cs" />
     <Compile Include="Assets\Scripts\MoveShip.cs" />
+    <Compile Include="Assets\Scripts\MoveShipEnemySimple.cs" />
     <Compile Include="Assets\Scripts\SimpleBullet.cs" />
     <Compile Include="Assets\Scripts\SpiralBullet.cs" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />

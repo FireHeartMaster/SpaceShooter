@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum FireShotType { Simple, Diagonal, Spiral };
 public class BulletGun : MonoBehaviour
 {
     [SerializeField] float baseDamage = 10;
@@ -15,7 +16,7 @@ public class BulletGun : MonoBehaviour
     [SerializeField] GameObject simpleBulletPrefab;
     [SerializeField] GameObject spiralBulletPrefab;
 
-    public enum FireShotType { Simple, Diagonal, Spiral };
+    
 
     public FireShotType m_FireShotType = FireShotType.Simple;
 

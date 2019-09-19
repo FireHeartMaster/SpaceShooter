@@ -5,42 +5,49 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class MoveShip : MonoBehaviour
 {
-    [SerializeField] Transform topCameraLimit;
-    [SerializeField] Transform bottomCameraLimit;
-    [SerializeField] Transform leftCameraLimit;
-    [SerializeField] Transform rightCameraLimit;
+    [SerializeField] protected Transform topCameraLimit;
+    [SerializeField] protected Transform bottomCameraLimit;
+    [SerializeField] protected Transform leftCameraLimit;
+    [SerializeField] protected Transform rightCameraLimit;
 
     [HideInInspector] public Vector3 move;
 
-    [SerializeField] float shipSpeed = 1f;
+    [SerializeField] protected float shipSpeed = 1f;
 
-    [SerializeField] float snapDistance = 0.1f;
+    [SerializeField] protected float snapDistance = 0.1f;
 
     [Space]
-    [SerializeField] float dodgeDistance = 15f;
+    [SerializeField] protected float dodgeDistance = 15f;
 
-    [SerializeField] Energy playerEnergy;
+    [SerializeField] protected Energy shipEnergy;
 
-    [SerializeField] float energyAmountToDodge = 40f;
+    [SerializeField] protected float energyAmountToDodge = 40f;
 
-    [SerializeField] Health playerHealth;
+    [SerializeField] protected Health shipHealth;
 
     private void Update()
     {      
         transform.localPosition += move * shipSpeed * Time.deltaTime;
-        transform.localPosition = new Vector3(Mathf.Clamp(transform.localPosition.x, leftCameraLimit.localPosition.x + snapDistance, rightCameraLimit.localPosition.x - snapDistance),
+        if (leftCameraLimit != null && rightCameraLimit != null && topCameraLimit != null && bottomCameraLimit != null)
+        {
+            transform.localPosition = new Vector3(Mathf.Clamp(transform.localPosition.x, leftCameraLimit.localPosition.x + snapDistance, rightCameraLimit.localPosition.x - snapDistance),
                                                 Mathf.Clamp(transform.localPosition.y, bottomCameraLimit.localPosition.y + snapDistance, topCameraLimit.localPosition.y - snapDistance),
                                                 transform.localPosition.z);
+        }
     }
 
 
     public void Dodge()
     {
         transform.localPosition += move.normalized * dodgeDistance;
-        transform.localPosition = new Vector3(Mathf.Clamp(transform.localPosition.x, leftCameraLimit.localPosition.x + snapDistance, rightCameraLimit.localPosition.x - snapDistance),
+        if(leftCameraLimit != null && rightCameraLimit != null && topCameraLimit != null && bottomCameraLimit != null)
+        {
+            transform.localPosition = new Vector3(Mathf.Clamp(transform.localPosition.x, leftCameraLimit.localPosition.x + snapDistance, rightCameraLimit.localPosition.x - snapDistance),
                                                 Mathf.Clamp(transform.localPosition.y, bottomCameraLimit.localPosition.y + snapDistance, topCameraLimit.localPosition.y - snapDistance),
                                                 transform.localPosition.z);
-        playerHealth.PlayerDodgeInvincibility();
-        playerEnergy.SpendEnergy(energyAmountToDodge);
+        }
+        
+        shipHealth.PlayerDodgeInvincibility();
+        shipEnergy.SpendEnergy(energyAmountToDodge);
     }
 }
