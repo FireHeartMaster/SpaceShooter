@@ -14,9 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveDirection: {x: 1, y: 0, z: 0}
   bulletDamage: 10
+  bulletDirection: {x: 1, y: 0, z: 0}
   bulletSpeed: 18.4
   playerBullet: 1
   canProvokeDamage: 1
+  smallExplosionPrefab: {fileID: 3239052652571345495, guid: 06bd50d7c89ad224eb146692a98d0060,
+    type: 3}
   radiusIncreasingSpeed: 2
   angleIncreasingSpeed: 8
 --- !u!1001 &3226099814652020819
@@ -106,7 +109,8 @@ PrefabInstance:
       propertyPath: lengthInSec
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8645821835262106723, guid: 5f4b1e079bdc71146b43a6edb2b60708, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5f4b1e079bdc71146b43a6edb2b60708, type: 3}
 --- !u!1 &6573366041938007093 stripped
 GameObject:

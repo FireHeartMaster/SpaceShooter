@@ -27,6 +27,7 @@ public class Health : MonoBehaviour
     [Header("Death")]
     [SerializeField] float timeToDisapearAfterDying = 3f;
     [SerializeField] GameObject explosionPrefab;
+    [SerializeField] GameObject gameOverScreen;
 
     [Space]
     [Header("DamageDelay")]
@@ -45,6 +46,8 @@ public class Health : MonoBehaviour
         }
 
         timeSinceLastDamage = timeBetweenDamages;
+
+        canTakeDamage = true;
     }
 
 
@@ -84,7 +87,7 @@ public class Health : MonoBehaviour
         //}
 
         currentHealth -= damageAmount;
-
+        Debug.Log("currentHealth: " + currentHealth);
         if(currentHealth <= 0)
         {
             Die();
@@ -98,6 +101,10 @@ public class Health : MonoBehaviour
         isAlive = false;
         spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0f);
         GameObject explosionGameObject = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        if(gameOverScreen != null)
+        {
+            gameOverScreen.SetActive(true);
+        }
         Destroy(gameObject, timeToDisapearAfterDying);
     }
 

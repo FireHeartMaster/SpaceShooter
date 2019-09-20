@@ -32,6 +32,13 @@ public class EnemySimpleInputManager : MonoBehaviour
     [SerializeField] float cosineMovementAmplitude = 30f;
     [SerializeField] float angularFrequency = 1f;
 
+    [Space]
+    [Header("EnemyShooting")]
+    [SerializeField] float baseControlledTimeBetweenShots = 3f;
+    float randomizedBaseControlledTimeBetweenShots;
+    [SerializeField] float maxRandomRangeAroundBaseControlledTimeBetweenShots = 0.5f;
+
+
     private void Awake()
     {
         timeSinceLastShot = timeBetweenShots;
@@ -39,6 +46,9 @@ public class EnemySimpleInputManager : MonoBehaviour
         timeSinceChangeOfShotType = timeBetweenChangingShotType;
 
         timeSinceLastDodge = timeBetweenDodges;
+
+        randomizedBaseControlledTimeBetweenShots = Random.Range(baseControlledTimeBetweenShots - maxRandomRangeAroundBaseControlledTimeBetweenShots, baseControlledTimeBetweenShots + maxRandomRangeAroundBaseControlledTimeBetweenShots);
+        //timeSinceChangeOfShotType = randomizedBaseControlledTimeBetweenShots;
     }
 
     protected void Start()
@@ -76,6 +86,15 @@ public class EnemySimpleInputManager : MonoBehaviour
         float fire = 0f;
 
         timeSinceLastShot += Time.deltaTime;
+        //Debug.Log("timeSinceLastShot: " + timeSinceLastShot);
+        //Debug.Log("randomizedBaseControlledTimeBetweenShots: " + randomizedBaseControlledTimeBetweenShots);
+        if (timeSinceLastShot >= randomizedBaseControlledTimeBetweenShots)
+        {
+            fire = 1f;
+            //timeSinceLastShot = 0f;
+            randomizedBaseControlledTimeBetweenShots = Random.Range(baseControlledTimeBetweenShots - maxRandomRangeAroundBaseControlledTimeBetweenShots, baseControlledTimeBetweenShots + maxRandomRangeAroundBaseControlledTimeBetweenShots);
+        }
+        //Debug.Log("fire: " + fire);
         if (fire >= 0.5f && timeSinceLastShot >= timeBetweenShots)
         {
             if (energy.canShoot)
@@ -83,6 +102,7 @@ public class EnemySimpleInputManager : MonoBehaviour
                 timeSinceLastShot = 0f;
                 shipBulletGun.Shoot();
                 //Debug.Log("Fire!!!");
+                fire = 0f;
             }
         }
 

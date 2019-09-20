@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f61ba3a80c8c0764abaa7ca0694c93a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 30
+  maxHealth: 100
   currentHealth: 0
   canTakeDamage: 0
   isAlive: 1
@@ -256,9 +256,11 @@ MonoBehaviour:
   alphaValueInvincibilityDesign: 0.5
   spriteRenderer: {fileID: 3458844590165583105}
   healthSlider: {fileID: 0}
-  timeToDisapearAfterDying: 3
+  timeToDisapearAfterDying: 0.1
   explosionPrefab: {fileID: 1745349613052912752, guid: 7e4e5182ea4b3a34a8f92e5079e8841d,
     type: 3}
+  gameOverScreen: {fileID: 0}
+  timeBetweenDamages: 2
 --- !u!114 &3458844590165583114
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -98,9 +98,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveDirection: {x: 1, y: 0, z: 0}
   bulletDamage: 10
+  bulletDirection: {x: 1, y: 0, z: 0}
   bulletSpeed: 30
   playerBullet: 1
   canProvokeDamage: 1
+  smallExplosionPrefab: {fileID: 3239052652571345495, guid: 06bd50d7c89ad224eb146692a98d0060,
+    type: 3}
 --- !u!58 &8645821835262106722
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -124,11 +127,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8645821835262106721}
     m_Modifications:
-    - target: {fileID: 5990893863676160267, guid: 198d396aecfe7a849be91771737d04c0,
-        type: 3}
-      propertyPath: m_Name
-      value: Flare
-      objectReference: {fileID: 0}
     - target: {fileID: 5990893863676130603, guid: 198d396aecfe7a849be91771737d04c0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -183,6 +181,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990893863676160267, guid: 198d396aecfe7a849be91771737d04c0,
+        type: 3}
+      propertyPath: m_Name
+      value: Flare
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 198d396aecfe7a849be91771737d04c0, type: 3}

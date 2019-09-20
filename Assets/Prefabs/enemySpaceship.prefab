@@ -180,9 +180,11 @@ MonoBehaviour:
   alphaValueInvincibilityDesign: 0.5
   spriteRenderer: {fileID: 6674536000198658699}
   healthSlider: {fileID: 0}
-  timeToDisapearAfterDying: 3
+  timeToDisapearAfterDying: 0.1
   explosionPrefab: {fileID: 1745349613052912752, guid: 7e4e5182ea4b3a34a8f92e5079e8841d,
     type: 3}
+  gameOverScreen: {fileID: 0}
+  timeBetweenDamages: 2
 --- !u!114 &4676121192375948252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,6 +232,8 @@ MonoBehaviour:
   enemyMovementType: 0
   cosineMovementAmplitude: 2
   angularFrequency: 5
+  baseControlledTimeBetweenShots: 3
+  maxRandomRangeAroundBaseControlledTimeBetweenShots: 0.5
 --- !u!114 &4486817856016653190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,6 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 484e6136bb2b7c84c93a1b94b078a60c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contactDamage: 200
 --- !u!1 &4416358876799658712
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,8 +315,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseDamage: 10
   damageMultiplier: 1
-  isPlayer: 1
-  simpleBulletPrefab: {fileID: 8645821835262106726, guid: 5f4b1e079bdc71146b43a6edb2b60708,
+  isPlayer: 0
+  simpleBulletPrefab: {fileID: 8645821835262106726, guid: a2a53be0b4ba94a4c84c5913c98a6a3a,
     type: 3}
   spiralBulletPrefab: {fileID: 6573366041938007093, guid: 793a002e86bae8d4891038349de11554,
     type: 3}
