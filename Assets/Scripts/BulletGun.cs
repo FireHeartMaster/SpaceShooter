@@ -34,6 +34,10 @@ public class BulletGun : MonoBehaviour
     public float alphaValueWhenNotActive = 0.5f;
     public Image[] bulletImageSelection;
 
+    [Space]
+    [Header("Pool Factory")]
+    Factory factory;
+
     private void Awake()
     {
         if(transform.parent.tag == "Player")
@@ -43,6 +47,12 @@ public class BulletGun : MonoBehaviour
         {
             isPlayer = false;
         }
+
+    }
+
+    private void Start()
+    {
+        factory = Factory.m_Factory;
     }
 
     public void Shoot()
@@ -60,7 +70,8 @@ public class BulletGun : MonoBehaviour
                 break;
 
             case FireShotType.Spiral:
-                SimpleShoot(spiralBulletPrefab, (isPlayer ? Vector3.right : Vector3.left));
+                ShootSpiral(spiralBulletPrefab);
+                //SimpleShoot(spiralBulletPrefab, (isPlayer ? Vector3.right : Vector3.left));
                 energy.SpendEnergy(spiralShotEnergyAmount);
                 break;
 
@@ -70,25 +81,28 @@ public class BulletGun : MonoBehaviour
                 break;
         }
     }
-    public void SimpleShoot(GameObject bulletPrefab, Vector3 direction)
+    public void SimpleShoot(GameObject bulletPrefab, Vector3 direction, bool isSpiralBullet = false)
     {
-        GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        //Debug.Log("isSpiralBullet: " + isSpiralBullet);
+        //GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        GameObject bullet = factory.CreateBullet(transform.position, Quaternion.identity, isSpiralBullet);
 
         //simpleBullet = bullet.GetComponent<SimpleBullet>();
         //simpleBullet.Init(baseDamage * damageMultiplier, direction, 30f, isPlayer);
         bulletScript = bullet.GetComponent<Bullet>();
-        bulletScript.Init(baseDamage * damageMultiplier, direction, 30f, isPlayer);
+        bulletScript.Init(baseDamage * damageMultiplier, direction, 30f, isPlayer, isSpiralBullet);
     }
 
     public void ShootDiagonal(GameObject bulletPrefab)
     {
         SimpleShoot(bulletPrefab, ((isPlayer ? Vector3.right : Vector3.left) + Vector3.up).normalized);
         SimpleShoot(bulletPrefab, ((isPlayer ? Vector3.right : Vector3.left) - Vector3.up).normalized);
+        SimpleShoot(bulletPrefab, (isPlayer ? Vector3.right : Vector3.left));
     }
 
     public void ShootSpiral(GameObject bulletPrefab)
     {
-        SimpleShoot(bulletPrefab, (isPlayer ? Vector3.right : Vector3.left));
+        SimpleShoot(bulletPrefab, (isPlayer ? Vector3.right : Vector3.left), true);
     }
 }
 

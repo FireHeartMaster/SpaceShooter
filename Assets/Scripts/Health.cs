@@ -34,6 +34,11 @@ public class Health : MonoBehaviour
     [SerializeField] float timeBetweenDamages = 2f;
     float timeSinceLastDamage;
 
+    //Pool Recycling
+    Factory factory;
+
+    Animator animator;
+
     private void Awake()
     {
         currentHealth = maxHealth;
@@ -48,8 +53,16 @@ public class Health : MonoBehaviour
         timeSinceLastDamage = timeBetweenDamages;
 
         canTakeDamage = true;
+
+        animator = GetComponent<Animator>();
+        animator.enabled = false;
+
     }
 
+    private void Start()
+    {
+        factory = Factory.m_Factory;
+    }
 
     private void Update()
     {
@@ -87,7 +100,14 @@ public class Health : MonoBehaviour
         //}
 
         currentHealth -= damageAmount;
-        Debug.Log("currentHealth: " + currentHealth);
+
+        if(currentHealth > 0)
+        {
+            animator.enabled = true;
+            animator.Play("TookDamageAnimation", -1, 0f);
+        }
+
+        //Debug.Log("currentHealth: " + currentHealth);
         if(currentHealth <= 0)
         {
             Die();
@@ -96,15 +116,19 @@ public class Health : MonoBehaviour
 
     void Die()
     {
-        Debug.Log(gameObject.name + " is dead");
+        //Debug.Log(gameObject.name + " is dead");
         canTakeDamage = false;
         isAlive = false;
         spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0f);
-        GameObject explosionGameObject = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-        if(gameOverScreen != null)
+        //GameObject explosionGameObject = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        GameObject explosionGameObject = factory.CreateExplosion(transform.position, Quaternion.identity);
+        factory.CallIntentToDeactivateExplosion(explosionGameObject, false);
+        if (gameOverScreen != null)
         {
             gameOverScreen.SetActive(true);
         }
+        //animator.enabled = false;
+
         Destroy(gameObject, timeToDisapearAfterDying);
     }
 

@@ -16,12 +16,24 @@ public abstract class Bullet : MonoBehaviour
 
     [SerializeField] protected GameObject smallExplosionPrefab;
 
-    public virtual void Init(float m_damage, Vector3 m_direction, float m_speed, bool isPlayer)
+    protected bool isSpiralBullet = false;
+
+    [Space]
+    [Header("Pool Factory")]
+    Factory factory;
+
+    private void Start()
+    {
+        factory = Factory.m_Factory;
+    }
+
+    public virtual void Init(float m_damage, Vector3 m_direction, float m_speed, bool isPlayer, bool _isSpiralBullet = false)
     {
         bulletDamage = m_damage;
         bulletDirection = m_direction;
         bulletSpeed = m_speed;
         playerBullet = isPlayer;
+        isSpiralBullet = _isSpiralBullet;
     }
 
 
@@ -30,27 +42,47 @@ public abstract class Bullet : MonoBehaviour
         canProvokeDamage = false;
         Explode();
 
-        Destroy(gameObject, timeToDisapear);
+        //Destroy(gameObject, timeToDisapear);
+        factory.DeactivateAndStoreBullet(gameObject, isSpiralBullet);
+
     }
 
     public virtual void Explode()
     {
-        GameObject smallExplosionGameObject = Instantiate(smallExplosionPrefab, transform.position, Quaternion.identity);
-        Destroy(smallExplosionGameObject, 5f);
+        Debug.Log("Explode");
+        //GameObject smallExplosionGameObject = Instantiate(smallExplosionPrefab, transform.position, Quaternion.identity);
+        GameObject smallExplosionGameObject = factory.CreateExplosion(transform.position, Quaternion.identity, true);
+        //Destroy(smallExplosionGameObject, 5f);
+
+        //Invoke("factory.DeactivateAndStoreExplosion(smallExplosionGameObject, true)", 5f);
+        //IEnumerator coroutineToDeactivateExplosion = DeactivateExplosion(smallExplosionGameObject, true);
+        //StartCoroutine(coroutineToDeactivateExplosion);
+
+        factory.CallIntentToDeactivateExplosion(smallExplosionGameObject, true);
+
     }
 
+    //IEnumerator DeactivateExplosion(GameObject explosion, bool isSmallExplosion, float timeToDeactivate = 5f)
+    //{
+    //    Debug.Log("DeactivateExplosion");
+    //    Debug.Log("timeToDeactivate: " + timeToDeactivate.ToString());
+    //    yield return new WaitForSeconds(1f);
+    //    Debug.Log("Calling factory.DeactivateAndStoreExplosion(explosion, isSmallExplosion);");
+    //    factory.DeactivateAndStoreExplosion(explosion, isSmallExplosion);
+
+    //}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("playerBullet: " + playerBullet);
-        Debug.Log("collision.tag: " + collision.tag);
-        Debug.Log("this: " + this);
+        //Debug.Log("playerBullet: " + playerBullet);
+        //Debug.Log("collision.tag: " + collision.tag);
+        //Debug.Log("this: " + this);
         if ((playerBullet && collision.tag == "Enemy") || (!playerBullet && collision.tag == "Player"))
         {
             //provoke damage
             Health health = collision.GetComponent<Health>();
 
-            Debug.Log("health == null ??? " + (health == null).ToString());
+            //Debug.Log("health == null ??? " + (health == null).ToString());
             if (health != null)
             {
                 health.TakeDamage(bulletDamage);

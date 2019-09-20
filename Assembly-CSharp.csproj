@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\EnemySimpleInputManager.cs" />
     <Compile Include="Assets\Scripts\Energy.cs" />
     <Compile Include="Assets\Scripts\Eraser.cs" />
+    <Compile Include="Assets\Scripts\Factory.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\MoveBackground.cs" />

@@ -52,8 +52,8 @@ MonoBehaviour:
     type: 3}
   m_FireShotType: 0
   simpleShotEnergyAmount: 10
-  diagonalShotEnergyAmount: 20
-  spiralShotEnergyAmount: 30
+  diagonalShotEnergyAmount: 30
+  spiralShotEnergyAmount: 40
   energy: {fileID: 3458844590165583114}
   alphaValueWhenNotActive: 0.4
   bulletImageSelection:
@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 3458844590165583108}
   - component: {fileID: 3458844590165583115}
   - component: {fileID: 3458844590165583114}
+  - component: {fileID: 1329529794}
   m_Layer: 0
   m_Name: playerSpaceship
   m_TagString: Player
@@ -286,3 +287,22 @@ MonoBehaviour:
   energySliderFillSlowRecoveryColor: {r: 0.8396226, g: 0.8211428, b: 0.122774996,
     a: 1}
   sliderFillImage: {fileID: 0}
+--- !u!95 &1329529794
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3458844590165583106}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6cf7fda544db51e478a67538b97d7e24, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

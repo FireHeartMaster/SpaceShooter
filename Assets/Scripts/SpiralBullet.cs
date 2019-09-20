@@ -8,10 +8,10 @@ public class SpiralBullet : Bullet
 
     Vector3 initialPosition;
 
-    float currentRadius = 0;
+    public float currentRadius = 0;
     [SerializeField] float radiusIncreasingSpeed = 1f;
 
-    float currentAngle = 0;
+    public float currentAngle = 0;
     [SerializeField] float angleIncreasingSpeed = Mathf.PI / 2f;
 
     private void Awake()

@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 8116362059892114224}
   - component: {fileID: 4486817856016653190}
   - component: {fileID: 8970657610291516991}
+  - component: {fileID: 8728592109463053446}
   m_Layer: 0
   m_Name: enemySpaceship
   m_TagString: Enemy
@@ -270,6 +271,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contactDamage: 200
+--- !u!95 &8728592109463053446
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3544537746121380677}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6cf7fda544db51e478a67538b97d7e24, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4416358876799658712
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,8 +342,8 @@ MonoBehaviour:
     type: 3}
   m_FireShotType: 0
   simpleShotEnergyAmount: 10
-  diagonalShotEnergyAmount: 20
-  spiralShotEnergyAmount: 30
+  diagonalShotEnergyAmount: 30
+  spiralShotEnergyAmount: 40
   energy: {fileID: 4676121192375948252}
   alphaValueWhenNotActive: 0.4
   bulletImageSelection:
