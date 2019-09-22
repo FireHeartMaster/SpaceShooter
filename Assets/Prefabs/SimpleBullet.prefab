@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveDirection: {x: 1, y: 0, z: 0}
-  bulletDamage: 10
+  bulletDamage: 30
   bulletDirection: {x: 1, y: 0, z: 0}
   bulletSpeed: 30
   playerBullet: 1

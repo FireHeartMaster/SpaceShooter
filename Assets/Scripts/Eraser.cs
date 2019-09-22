@@ -21,6 +21,11 @@ public class Eraser : MonoBehaviour
                     //Debug.Log("(spiralBulletScript != null) -- " + ((spiralBulletScript != null)).ToString());
                     factory.DeactivateAndStoreBullet(collision.gameObject, (spiralBulletScript != null));
                     break;
+
+                case ("Enemy"):
+                    factory.DeactivateAndStoreEnemy(collision.gameObject);
+                    break;
+
                 default:
                     Destroy(collision.gameObject);
                     break;

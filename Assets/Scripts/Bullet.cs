@@ -49,7 +49,7 @@ public abstract class Bullet : MonoBehaviour
 
     public virtual void Explode()
     {
-        Debug.Log("Explode");
+        //Debug.Log("Explode");
         //GameObject smallExplosionGameObject = Instantiate(smallExplosionPrefab, transform.position, Quaternion.identity);
         GameObject smallExplosionGameObject = factory.CreateExplosion(transform.position, Quaternion.identity, true);
         //Destroy(smallExplosionGameObject, 5f);

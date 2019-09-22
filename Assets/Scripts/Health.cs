@@ -5,11 +5,12 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
+    bool isPlayer = false;
     [SerializeField] float maxHealth = 30f;
 
     [HideInInspector] public float currentHealth;
 
-    [HideInInspector] public bool canTakeDamage = true;
+    /*[HideInInspector]*/ public bool canTakeDamage = true;
     [HideInInspector] public bool isAlive = true;
 
     [SerializeField] float dodgeInvincibilityDelay = 0.5f;
@@ -37,6 +38,9 @@ public class Health : MonoBehaviour
     //Pool Recycling
     Factory factory;
 
+    [Space]
+    [Header("DamageAnimation")]
+    [SerializeField] bool useDamageAnimation = false;
     Animator animator;
 
     private void Awake()
@@ -54,14 +58,18 @@ public class Health : MonoBehaviour
 
         canTakeDamage = true;
 
-        animator = GetComponent<Animator>();
-        animator.enabled = false;
+        if (useDamageAnimation)
+        {
+            animator = GetComponent<Animator>();
+            animator.enabled = false;
+        }
 
     }
 
     private void Start()
     {
         factory = Factory.m_Factory;
+        isPlayer = GetComponentInChildren<BulletGun>().isPlayer;
     }
 
     private void Update()
@@ -103,8 +111,11 @@ public class Health : MonoBehaviour
 
         if(currentHealth > 0)
         {
-            animator.enabled = true;
-            animator.Play("TookDamageAnimation", -1, 0f);
+            if (useDamageAnimation)
+            {
+                animator.enabled = true;
+                animator.Play("TookDamageAnimation", -1, 0f);
+            }
         }
 
         //Debug.Log("currentHealth: " + currentHealth);
@@ -127,9 +138,21 @@ public class Health : MonoBehaviour
         {
             gameOverScreen.SetActive(true);
         }
-        //animator.enabled = false;
 
-        Destroy(gameObject, timeToDisapearAfterDying);
+        //if (useDamageAnimation)
+        //{
+        //    animator.enabled = false;
+        //}
+
+        //Destroy(gameObject, timeToDisapearAfterDying);
+        if (!isPlayer)
+        {
+            factory.DeactivateAndStoreEnemy(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject, timeToDisapearAfterDying);
+        }
     }
 
     public void PlayerDodgeInvincibility()
@@ -149,5 +172,34 @@ public class Health : MonoBehaviour
     {
         spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 1f);
     }
+
+    public void ReinitializeHealth()
+    {
+        currentHealth = maxHealth;
+
+        timeSinceLastDodgeInvincibility = dodgeInvincibilityDelay;
+
+        if (healthSlider != null)
+        {
+            healthSlider.maxValue = maxHealth;
+        }
+
+        timeSinceLastDamage = timeBetweenDamages;
+
+        canTakeDamage = true;
+
+        if (useDamageAnimation)
+        {
+            animator = GetComponent<Animator>();
+            animator.enabled = false;
+        }
+
+        //This part is executed in the Start function when this GameObject is Instantiated, while the above in the Awake function 
+        factory = Factory.m_Factory;
+
+        canTakeDamage = true;
+
+        isAlive = true;
+        spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 1f);
+    }
 }
-;

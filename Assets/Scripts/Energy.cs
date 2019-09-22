@@ -76,4 +76,14 @@ public class Energy : MonoBehaviour
         }
     }
 
+
+    public void ReinitializeEnergy()
+    {
+        currentEnergy = maxEnergy;
+
+        if (energySlider != null)
+        {
+            energySlider.maxValue = maxEnergy;
+        }
+    }
 }

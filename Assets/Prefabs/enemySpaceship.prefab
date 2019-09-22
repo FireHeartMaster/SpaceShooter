@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8240837946840089257}
   - component: {fileID: 6674536000198658699}
   - component: {fileID: 2059247542455812171}
-  - component: {fileID: 1831978512395263732}
   - component: {fileID: 3472877957116724431}
   - component: {fileID: 7843830976120033703}
   - component: {fileID: 4676121192375948252}
@@ -19,6 +18,7 @@ GameObject:
   - component: {fileID: 4486817856016653190}
   - component: {fileID: 8970657610291516991}
   - component: {fileID: 8728592109463053446}
+  - component: {fileID: 7837822929795652544}
   m_Layer: 0
   m_Name: enemySpaceship
   m_TagString: Enemy
@@ -117,29 +117,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.197566, y: 4.1173544}
   m_EdgeRadius: 0
---- !u!114 &1831978512395263732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3544537746121380677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1227f584985a7274187a2d685bbcf18c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  topCameraLimit: {fileID: 0}
-  bottomCameraLimit: {fileID: 0}
-  leftCameraLimit: {fileID: 0}
-  rightCameraLimit: {fileID: 0}
-  move: {x: 0, y: 0, z: 0}
-  shipSpeed: 30
-  snapDistance: 0
-  dodgeDistance: 15
-  shipEnergy: {fileID: 4676121192375948252}
-  energyAmountToDodge: 40
-  shipHealth: {fileID: 7843830976120033703}
 --- !u!50 &3472877957116724431
 Rigidbody2D:
   serializedVersion: 4
@@ -186,6 +163,7 @@ MonoBehaviour:
     type: 3}
   gameOverScreen: {fileID: 0}
   timeBetweenDamages: 2
+  useDamageAnimation: 0
 --- !u!114 &4676121192375948252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,6 +268,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7837822929795652544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3544537746121380677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134b22845e8629f4fb249a9a3378fa83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyGroupIndex: 0
+  enemyIndexInTheGroup: 0
 --- !u!1 &4416358876799658712
 GameObject:
   m_ObjectHideFlags: 0

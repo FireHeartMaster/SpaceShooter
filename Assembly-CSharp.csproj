@@ -62,6 +62,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\2D Pixel Spaceships (2 Small Ships + Explosions)\Scripts\BaseFrameController.cs" />
+    <Compile Include="Assets\2D Pixel Spaceships (2 Small Ships + Explosions)\Scripts\FrameController.cs" />
+    <Compile Include="Assets\2D Pixel Spaceships (2 Small Ships + Explosions)\Scripts\SceneController.cs" />
+    <Compile Include="Assets\2D Pixel Spaceships (2 Small Ships + Explosions)\Scripts\Tools.cs" />
+    <Compile Include="Assets\2D Pixel Spaceships (2 Small Ships + Explosions)\Scripts\ships\BaseBulletStarter.cs" />
+    <Compile Include="Assets\2D Pixel Spaceships (2 Small Ships + Explosions)\Scripts\ships\ExplosionController.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
@@ -76,6 +82,7 @@
     <Compile Include="Assets\Scripts\ControlBackground.cs" />
     <Compile Include="Assets\Scripts\EnemyProvokeDamageOnContact.cs" />
     <Compile Include="Assets\Scripts\EnemySimpleInputManager.cs" />
+    <Compile Include="Assets\Scripts\EnemySpawnInfo.cs" />
     <Compile Include="Assets\Scripts\Energy.cs" />
     <Compile Include="Assets\Scripts\Eraser.cs" />
     <Compile Include="Assets\Scripts\Factory.cs" />

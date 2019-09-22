@@ -12,7 +12,7 @@ public class BulletGun : MonoBehaviour
     SimpleBullet simpleBullet;
     Bullet bulletScript;
 
-    [SerializeField] bool isPlayer = true;
+    public bool isPlayer = true;
 
     [SerializeField] GameObject simpleBulletPrefab;
     [SerializeField] GameObject spiralBulletPrefab;
