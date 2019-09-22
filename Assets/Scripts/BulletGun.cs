@@ -17,9 +17,8 @@ public class BulletGun : MonoBehaviour
     [SerializeField] GameObject simpleBulletPrefab;
     [SerializeField] GameObject spiralBulletPrefab;
 
-    
-
     public FireShotType m_FireShotType = FireShotType.Simple;
+    FireShotType previousFireShotType = FireShotType.Simple;
 
     [Space]
     [SerializeField] float simpleShotEnergyAmount = 10f;
@@ -38,6 +37,12 @@ public class BulletGun : MonoBehaviour
     [Header("Pool Factory")]
     Factory factory;
 
+    [Space]
+    [Header("Shooting audio")]
+    AudioSource audioSource;
+    [SerializeField] AudioClip shotAudioClip;
+    [SerializeField] AudioClip changingShotTypeAudioClip;
+
     private void Awake()
     {
         if(transform.parent.tag == "Player")
@@ -48,6 +53,12 @@ public class BulletGun : MonoBehaviour
             isPlayer = false;
         }
 
+        audioSource = GetComponent<AudioSource>();
+        if(isPlayer && audioSource != null)
+        {
+            audioSource.clip = shotAudioClip;
+        }
+
     }
 
     private void Start()
@@ -55,8 +66,29 @@ public class BulletGun : MonoBehaviour
         factory = Factory.m_Factory;
     }
 
+
+    private void Update()
+    {
+
+        if(m_FireShotType != previousFireShotType)
+        {
+            if (isPlayer && audioSource != null && changingShotTypeAudioClip != null)
+            {
+                audioSource.clip = changingShotTypeAudioClip;
+                audioSource.Play();
+            }
+        }
+        previousFireShotType = m_FireShotType;
+    }
+
     public void Shoot()
     {
+        if(isPlayer && audioSource != null && shotAudioClip != null)
+        {
+            audioSource.clip = shotAudioClip;
+            audioSource.Play();
+        }
+        
         switch (m_FireShotType)
         {
             case FireShotType.Simple:
