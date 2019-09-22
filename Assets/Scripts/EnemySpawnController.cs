@@ -14,7 +14,7 @@ public class EnemySpawnController : MonoBehaviour
 
     Factory factory;
 
-    [SerializeField] string pathToXMLFile = "Assets/XMLFiles/Level01.xml";
+    [SerializeField] string pathToXMLFile = "XMLFiles/Level01.xml";
     XDocument xmlDoc;
     //IEnumerable<XElement> items;
     List <XMLData> data = new List <XMLData>(); //Initialize List of XMLData objects.
@@ -104,7 +104,7 @@ public class EnemySpawnController : MonoBehaviour
     {
 
         //Assigning Xdocument xmlDoc. Loads the xml file from the file path listed. 
-        xmlDoc = XDocument.Load(pathToXMLFile);
+        xmlDoc = XDocument.Load(Application.streamingAssetsPath + "\\" + pathToXMLFile);
 
         //This basically breaks down the XML Document into XML Elements. Used later. 
         var allData = xmlDoc.Descendants("level").Elements("EnemyDataToSpawn");

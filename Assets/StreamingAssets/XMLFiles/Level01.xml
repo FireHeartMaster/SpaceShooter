@@ -1,0 +1,1179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+
+<level>
+
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>71.60113</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>4</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>71.60113</x>
+    <y>8</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>6</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>71.60113</x>
+    <y>-8</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>6</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>1</enemyIndexInTheGroup>
+    
+    <x>33</x>
+    <y>-30.6</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>8</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>1</enemyIndexInTheGroup>
+    
+    <x>43.1</x>
+    <y>-20.9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>8</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>69.8</x>
+    <y>7</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>9</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>69.8</x>
+    <y>-7</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>9</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>84.88297</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>9</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>108.5</x>
+    <y>-7</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>9</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>99.10001</x>
+    <y>7</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>9</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>2</enemyIndexInTheGroup>
+    
+    <x>60.5</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>13</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>1</enemyIndexInTheGroup>
+    
+    <x>50.2</x>
+    <y>-28.6</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>14</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>1</enemyIndexInTheGroup>
+    
+    <x>57</x>
+    <y>-39.9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>14</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>1</enemyIndexInTheGroup>
+    
+    <x>63.9</x>
+    <y>-50.8</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>14</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>2</enemyIndexInTheGroup>
+    
+    <x>73.1</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>16</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>2</enemyIndexInTheGroup>
+    
+    <x>62.97165</x>
+    <y>-9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>16</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>2</enemyIndexInTheGroup>
+    
+    <x>84.39999</x>
+    <y>9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>16</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>1</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>86.8</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>18</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>1</enemyIndexInTheGroup>
+    
+    <x>46.5</x>
+    <y>-38.8</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>22</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>1</enemyIndexInTheGroup>
+    
+    <x>57.3</x>
+    <y>-24.4</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>22</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>1</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>67.85135</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>23.5</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>1</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>90</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>23.5</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>1</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>78.9</x>
+    <y>9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>23.5</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>1</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>78.9</x>
+    <y>-9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>23.5</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>2</enemyIndexInTheGroup>
+    
+    <x>78.2</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>23.5</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>1</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>67.85135</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>26</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>1</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>90</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>26</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>1</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>78.9</x>
+    <y>9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>26</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>1</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>78.9</x>
+    <y>-9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>26</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>2</enemyIndexInTheGroup>
+    
+    <x>78.2</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>26</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+    
+
+  <EnemyDataToSpawn>
+
+    <enemyGroup>1</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>67.85135</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>28.5</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>1</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>90</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>28.5</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>1</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>78.9</x>
+    <y>9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>28.5</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>1</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>78.9</x>
+    <y>-9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>28.5</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>2</enemyIndexInTheGroup>
+    
+    <x>78.2</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>28.5</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>2</enemyIndexInTheGroup>
+    
+    <x>70.7</x>
+    <y>-9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>31</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>2</enemyIndexInTheGroup>
+    
+    <x>83.15808</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>31</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>2</enemyIndexInTheGroup>
+    
+    <x>95.45808</x>
+    <y>9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>31</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>2</enemyIndexInTheGroup>
+    
+    <x>70.7</x>
+    <y>-9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>32.5</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>2</enemyIndexInTheGroup>
+    
+    <x>83.15808</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>32.5</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>2</enemyIndexInTheGroup>
+    
+    <x>95.45808</x>
+    <y>9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>32.5</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>2</enemyIndexInTheGroup>
+    
+    <x>70.7</x>
+    <y>-9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>34</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>2</enemyIndexInTheGroup>
+    
+    <x>83.15808</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>34</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>2</enemyIndexInTheGroup>
+    
+    <x>95.45808</x>
+    <y>9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>34</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>1</enemyGroup>
+    <enemyIndexInTheGroup>1</enemyIndexInTheGroup>
+    
+    <x>31.1076</x>
+    <y>-23.1</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>39</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>1</enemyGroup>
+    <enemyIndexInTheGroup>1</enemyIndexInTheGroup>
+    
+    <x>44.3</x>
+    <y>-31.1</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>39</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>1</enemyGroup>
+    <enemyIndexInTheGroup>1</enemyIndexInTheGroup>
+    
+    <x>56</x>
+    <y>-39.1</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>39</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>1</enemyGroup>
+    <enemyIndexInTheGroup>1</enemyIndexInTheGroup>
+    
+    <x>67.56</x>
+    <y>-47.1</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>39</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>1</enemyGroup>
+    <enemyIndexInTheGroup>1</enemyIndexInTheGroup>
+    
+    <x>78.3</x>
+    <y>-55.1</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>39</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>1</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>74.73846</x>
+    <y>-9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>43</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>1</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>86.93846</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>43</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>1</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>99.63846</x>
+    <y>9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>43</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>2</enemyIndexInTheGroup>
+    
+    <x>119.4</x>
+    <y>-8</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>43</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>2</enemyIndexInTheGroup>
+    
+    <x>108.3</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>43</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>2</enemyIndexInTheGroup>
+    
+    <x>96.64333</x>
+    <y>-8</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>43</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+
+
+
+  <EnemyDataToSpawn>
+
+    <enemyGroup>1</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>74.73846</x>
+    <y>-9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>47</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>1</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>86.93846</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>47</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>1</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>99.63846</x>
+    <y>9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>47</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>2</enemyIndexInTheGroup>
+    
+    <x>119.4</x>
+    <y>-8</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>47</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>2</enemyIndexInTheGroup>
+    
+    <x>108.3</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>47</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>2</enemyIndexInTheGroup>
+    
+    <x>96.64333</x>
+    <y>-8</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>47</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>71.60113</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>57</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>84.60113</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>57</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>0</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>97.60113</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>57</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>2</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>85.2</x>
+    <y>-9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>67</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>2</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>85.2</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>68</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>2</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>85.2</x>
+    <y>9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>69</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>2</enemyGroup>
+    <enemyIndexInTheGroup>1</enemyIndexInTheGroup>
+    
+    <x>85.2</x>
+    <y>-9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>71</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>2</enemyGroup>
+    <enemyIndexInTheGroup>1</enemyIndexInTheGroup>
+    
+    <x>85.2</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>72</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>2</enemyGroup>
+    <enemyIndexInTheGroup>1</enemyIndexInTheGroup>
+    
+    <x>85.2</x>
+    <y>9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>73</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>2</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>85.2</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>74</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>3</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>75.9</x>
+    <y>-9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>75</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>3</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>86.1953</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>75</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>3</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>75.9</x>
+    <y>-9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>76</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>3</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>86.1953</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>76</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>3</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>75.9</x>
+    <y>-9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>78</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>3</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>86.1953</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>78</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>3</enemyGroup>
+    <enemyIndexInTheGroup>1</enemyIndexInTheGroup>
+    
+    <x>80.3</x>
+    <y>-4.8</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>80</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>3</enemyGroup>
+    <enemyIndexInTheGroup>1</enemyIndexInTheGroup>
+    
+    <x>96.3</x>
+    <y>4.8</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>81</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>3</enemyGroup>
+    <enemyIndexInTheGroup>1</enemyIndexInTheGroup>
+    
+    <x>80.3</x>
+    <y>-4.8</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>82.5</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>3</enemyGroup>
+    <enemyIndexInTheGroup>1</enemyIndexInTheGroup>
+    
+    <x>96.3</x>
+    <y>4.8</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>82.5</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>3</enemyGroup>
+    <enemyIndexInTheGroup>1</enemyIndexInTheGroup>
+    
+    <x>96.3</x>
+    <y>4.8</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>84</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>3</enemyGroup>
+    <enemyIndexInTheGroup>1</enemyIndexInTheGroup>
+    
+    <x>80.3</x>
+    <y>-4.8</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>85.5</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>3</enemyGroup>
+    <enemyIndexInTheGroup>1</enemyIndexInTheGroup>
+    
+    <x>96.3</x>
+    <y>4.8</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>85.5</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>3</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>75.9</x>
+    <y>-9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>87</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>3</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>86.1953</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>87</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>3</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>75.9</x>
+    <y>-9</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>89</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+  <EnemyDataToSpawn>
+
+    <enemyGroup>3</enemyGroup>
+    <enemyIndexInTheGroup>0</enemyIndexInTheGroup>
+    
+    <x>86.1953</x>
+    <y>0</y>
+    <z>34.0</z>
+    
+    <timeOfSpawning>89</timeOfSpawning>
+
+  </EnemyDataToSpawn>
+  
+
+  
+ 
+  
+  
+  
+  
+
+
+  
+
+</level>

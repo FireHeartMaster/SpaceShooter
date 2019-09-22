@@ -31,7 +31,7 @@ public class SpiralBullet : Bullet
         currentRadius += radiusIncreasingSpeed * Time.fixedDeltaTime;
         currentAngle += angleIncreasingSpeed * Time.fixedDeltaTime;
 
-        transform.position += new Vector3(currentRadius * Mathf.Cos(currentAngle), currentRadius * Mathf.Sin(currentAngle), transform.position.z);
+        transform.position += new Vector3(currentRadius * Mathf.Cos(currentAngle), currentRadius * Mathf.Sin(currentAngle), 0f);
 
         transform.rotation = Quaternion.LookRotation(Vector3.forward, Vector3.Cross(Vector3.forward, transform.position - previousPosition));
 

@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\BulletGun.cs" />
     <Compile Include="Assets\Scripts\BulletSimpleMove.cs" />
+    <Compile Include="Assets\Scripts\BulletsEraser.cs" />
     <Compile Include="Assets\Scripts\ControlBackground.cs" />
     <Compile Include="Assets\Scripts\EnemyProvokeDamageOnContact.cs" />
     <Compile Include="Assets\Scripts\EnemySimpleInputManager.cs" />
@@ -116,7 +117,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
-    <None Include="Assets\XMLFiles\Level01.xml" />
+    <None Include="Assets\StreamingAssets\XMLFiles\Level01.xml" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/UnityProjects/shooter/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

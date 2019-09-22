@@ -1954,8 +1954,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTimeSinceLevelStart: 0
-  pathToXMLFile: Assets/XMLFiles/Level01.xml
-  timeToWin: 20
+  pathToXMLFile: XMLFiles/Level01.xml
+  timeToWin: 100
   victoryPanel: {fileID: 2082152494}
   playerInputManager: {fileID: 3125695368363819761}
 --- !u!4 &534044979
@@ -2051,7 +2051,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -19.9, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2062,7 +2062,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 193.52, y: 22.8}
+  m_Size: {x: 225.82, y: 22.8}
   m_EdgeRadius: 0
 --- !u!1 &631242245
 GameObject:
@@ -2196,6 +2196,98 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &742144391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 742144395}
+  - component: {fileID: 742144394}
+  - component: {fileID: 742144393}
+  - component: {fileID: 742144392}
+  m_Layer: 8
+  m_Name: PlayerBulletsEraserWall
+  m_TagString: Eraser
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &742144392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742144391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e87edf0e53b48d47995bacc93af61e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &742144393
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742144391}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &742144394
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742144391}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 35.9, y: 141.6}
+  m_EdgeRadius: 0
+--- !u!4 &742144395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742144391}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 57.1, y: -0.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &891039786
 GameObject:
   m_ObjectHideFlags: 0
@@ -2871,7 +2963,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060554208}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35, y: 0, z: 0}
+  m_LocalPosition: {x: -23.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1643774475}
@@ -2967,7 +3059,7 @@ Camera:
   far clip plane: 1000
   field of view: 26
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 17.67
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -3409,7 +3501,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1354409638}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35, y: 0, z: 0}
+  m_LocalPosition: {x: 22.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1643774475}
@@ -4057,7 +4149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1579714521}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -50, y: 0, z: 0}
+  m_LocalPosition: {x: -83.8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1388941544}
@@ -4201,7 +4293,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -19.9, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4212,7 +4304,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 193.52, y: 22.8}
+  m_Size: {x: 225.82, y: 22.8}
   m_EdgeRadius: 0
 --- !u!1 &1643774474
 GameObject:
@@ -5031,12 +5123,12 @@ PrefabInstance:
     - target: {fileID: 3125695367171522867, guid: 261c4357aec203042a85c4faf96c1742,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.4
+      value: -17.2
       objectReference: {fileID: 0}
     - target: {fileID: 3125695367171522867, guid: 261c4357aec203042a85c4faf96c1742,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3125695367171522867, guid: 261c4357aec203042a85c4faf96c1742,
         type: 3}
@@ -5113,6 +5205,11 @@ PrefabInstance:
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 451444445}
+    - target: {fileID: 3125695367171522872, guid: 261c4357aec203042a85c4faf96c1742,
+        type: 3}
+      propertyPath: canTakeDamage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3125695367171522873, guid: 261c4357aec203042a85c4faf96c1742,
         type: 3}
       propertyPath: energySlider
