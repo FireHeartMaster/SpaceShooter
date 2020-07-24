@@ -42,7 +42,7 @@ public abstract class Bullet : MonoBehaviour
         canProvokeDamage = false;
         Explode();
 
-        //Destroy(gameObject, timeToDisapear);
+        //Destroy(gameObject, timeToDisapear);     
         factory.DeactivateAndStoreBullet(gameObject, isSpiralBullet);
 
     }

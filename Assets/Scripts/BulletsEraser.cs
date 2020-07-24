@@ -20,8 +20,9 @@ public class BulletsEraser : MonoBehaviour
             switch (collision.tag)
             {
                 case ("Bullet"):
-                    Bullet spiralBulletScript = collision.GetComponent<Bullet>();
-                    if (spiralBulletScript.playerBullet)
+                    Bullet bullet = collision.GetComponent<Bullet>();
+                    SpiralBullet spiralBulletScript = collision.GetComponent<SpiralBullet>();
+                    if (bullet.playerBullet)
                     {
                         factory.DeactivateAndStoreBullet(collision.gameObject, (spiralBulletScript != null));
                     }
